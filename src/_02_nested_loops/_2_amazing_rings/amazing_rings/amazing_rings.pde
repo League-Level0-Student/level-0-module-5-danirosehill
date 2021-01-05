@@ -4,15 +4,53 @@
 void setup() {
   /* Set the size of your sketch to be a rectangle like in the recipe demonstration */
   
+  size (800,500);
+ 
+  
   /* Call the noFill() command so all the ellipses will be transparent */
 }
 
+  int x1= 100;
+    int x2= 700;
+    
 void draw() {
 
         /* Use a for loop to make the first set of rings that will start in the left half of the window
-        (you can use the code from your Bullseye program).*/          
+        (you can use the code from your Bullseye program).*/    
+    background(#3CDEE3);
+    int i;
+    int x= 200;
+    int y= 200;
+    for (i=0; i < 8 ; i++) {
+    noFill();
+    ellipse (x1, 250, x-=20, y-=20);
+    }
+    int a= 200;
+    int b= 200;
+    for (i=0; i < 8 ; i++) {
+    noFill();
+    ellipse (x2, 250, a-=20, b-=20);
+    }
+    x2--;
+    x1++;
+    
+    if (x1==800){
+    x1=100;
+    }
+    if (x2==0){
+    x2=700;
+    }
+    
+    
+    
+  
+    
+    
+    
+    
 
-        
+   
+   
         /*Make this set of rings move across the sketch to the right 
         Hint: make two variables, one for x and another for the speed. 
         Then increase x by the amount in speed */
